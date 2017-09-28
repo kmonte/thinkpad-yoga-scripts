@@ -111,6 +111,7 @@ if __name__ == '__main__':
                 continue
             if STATES[i]['check'](x, y):
                 current_state = i
-                rotate(i)
+                if 'on' in sys.argv:
+                    rotate(i)
                 break
         sleep(1)

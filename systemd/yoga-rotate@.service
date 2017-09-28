@@ -4,8 +4,8 @@ Requires=display-manager.service
 After=display-manager.service
 
 [Service]
-Type=simple
-ExecStart=/usr/bin/env python2 /opt/thinkpad-yoga-scripts/rotate/thinkpad-rotate.py
+Type=forking
+ExecStart=/usr/bin/env sh /opt/thinkpad-yoga-scripts/rotate/tablet-mode.sh
 KillMode=process
 User=%i
 Environment="DISPLAY=:0" "XAUTHORITY=/home/%i/.Xauthority"
